@@ -1,0 +1,83 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="box">
+
+<div class="row mt-2">
+  <div>
+    <h1 class="pb-1 fs-3">Add Your Hotel</h1>
+    <form method="post" action="/stayhaven" class="needs-validation" novalidate enctype="multipart/form-data">
+      <div class="mb-1">
+        <label for="title" class="form-label mb-0">Title</label>
+        <input
+          type="text"
+          name="title"
+          placeholder="Enter your hotel name"
+          class="form-control"
+          required
+        />
+        <div class="valid-feedback">Title Looks good!</div>
+        <div class="invalid-feedback">Please enter the title.</div>
+      </div>
+      <div class="mb-1">
+        <label for="description" class="form-label mb-0">Description</label>
+        <textarea
+          name="description"
+          rows="3"
+          cols="30"
+          placeholder="Write here your description"
+          class="form-control"
+          type="text"
+          required
+        ></textarea>
+        <div class="invalid-feedback">Please enter the description.</div>
+      </div>
+      <div class="mb-1">
+        <label for="image" class="form-label mb-0">Upload Image</label>
+        <input
+          type="file"
+          name="image"
+          placeholder="Enter your hotel image URL"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="row">
+        <div class="mb-1 col-md-4">
+          <label for="price" class="form-label mb-0">Price</label>
+          <input
+            name="price"
+            placeholder="Price per night"
+            class="form-control w-120"
+            required
+          />
+          <div class="invalid-feedback">Price should be valid.</div>
+        </div>
+        <div class="mb-1 col-md-8">
+          <label for="country" class="form-label mb-0">Country</label>
+          <input
+            type="text"
+            name="country"
+            placeholder="Enter your country"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Country should be valid.</div>
+        </div>
+      </div>
+      <div class="mb-1">
+        <label for="location" class="form-label mb-0">Location</label>
+        <input
+          type="text"
+          name="location"
+          placeholder="Enter your location"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">Location should be valid.</div>
+      </div>
+      <br />
+      <button class="btn btn-dark add-btn">Add</button>
+    </form>
+  </div>
+</div>
+</div>

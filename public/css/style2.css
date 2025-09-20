@@ -1,0 +1,159 @@
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter {
+    align-items: center;
+    margin-right: 2.4rem;
+    margin-top: 1rem;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.menu-row a {
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    margin-right: 2rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.menu-row a:hover {
+    opacity: 1;
+}
+
+.filter p {
+    font-size: .8rem;
+}
+
+.tax-info {
+    display: none;
+}
+
+.filters-menu {
+    display: none;
+}
+
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.taxtoggle {
+    border: 1px solid black;
+    padding: .8rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 465px) {
+    .menu-row a {
+        margin-right: .6rem !important;
+        margin-top: .6rem !important;
+    }
+    .dropdown-menu {
+        padding: .5rem !important;
+    }
+    .filter {
+        font-size: .65rem;
+    }
+    .filter p {
+        font-size: .65rem;
+    }
+}
+
+@media (min-width: 465px) {
+    .dropdown-menu {
+        padding: 0 0 0 3rem !important;
+    }
+}
+
+@media (max-width: 440px) {
+    .option {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-size: .75rem !important;
+    }
+    .filters-menu {
+        margin-right: 0rem !important;
+    }
+    .filter-btn {
+        padding: .2rem .6rem .2rem .6rem !important;
+        font-size: .75rem !important;
+    }
+}
+
+@media (max-width: 1400px) {
+    .filter {
+        margin-right: 1.4rem;
+    }
+    .taxtoggle {
+        padding: .6rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .filters {
+        display: none;
+    }
+
+    .filters-menu {
+        margin-right: 3rem;
+    }
+
+    .filter-btn {
+        padding: .5rem .8rem .5rem .8rem !important;
+        margin: .5rem;
+        border: 1px solid black !important;
+        border-radius: 15px !important;
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    .show-box-sub-box {
+        padding: 0 4rem 0 4rem !important;
+    }
+}
+
+@media (min-width: 985px) {
+
+    .show-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-left: 3rem;
+    }
+}
+
+@media (max-width: 585px) {
+    .show-box {
+        padding: 0 1rem 0 1rem;
+    }
+    .review-box {
+        display: flex;
+        justify-content: center;
+        flex-direction: column !important;
+    }
+    .reviews {
+        width: 480px !important;
+    }
+}
+

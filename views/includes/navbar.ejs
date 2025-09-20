@@ -1,0 +1,52 @@
+
+<style>
+
+.search-inp {
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    font-size: .9rem;
+}
+</style>
+
+<nav
+  class="navbar navbar-expand-md bg-body-light sticky-top border-bottom shadow-sm"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand fs-3" href="/stayhaven">StayHaven</a>
+    <button
+      class="navbar-toggler menu-btn"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse bg-white" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link " href="/stayhaven">Explore</a>
+      </div>
+
+      <div class="search ms-auto">
+        <form class="d-flex" action="/search" role="search">
+          <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations" name="key" />
+          <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        </form>
+      </div>
+
+      <% console.log(currentUser);
+       %>
+
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link " href="/stayhaven/new">Your Home</a>
+        <% if(!currentUser) { %>
+        <a class="nav-link lg" href="/login">Log in</a>
+        <div class="signup">
+          <a class="nav-link lg" aria-current="page" href="/signup">Sign Up</a>
+        </div>
+        <% } %> <% if(currentUser) { %>
+        <a class="nav-link lg" href="/logout">logout</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>

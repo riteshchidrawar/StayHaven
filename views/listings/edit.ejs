@@ -1,0 +1,87 @@
+<% layout("/layouts/boilerplate") %>
+
+<form
+  method="post"
+  action="/stayhaven/<%= list._id %>?_method=PATCH"
+  novalidate
+  class="needs-validation"
+  enctype="multipart/form-data"
+>
+  <div class="row offset-3">
+    <div class="col-8">
+      <h1 class="pb-1 fs-3">Edit Your Detials</h1>
+      <div class="mb-1">
+        <label class="form-label mb-0" for="title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          name="title"
+          value="<%= list.title %>"
+          required
+        />
+        <div class="valid-feedback">Title Looks good!</div>
+        <div class="invalid-feedback">Please enter the title.</div>
+      </div>
+      <div class="mb-1">
+        <label class="form-label mb-0" for="description">Description</label>
+        <textarea
+          name="description"
+          rows="3"
+          cols="30"
+          type="text"
+          class="form-control"
+          required
+        ><%= list.description %></textarea>
+        <div class="invalid-feedback">Please enter the description.</div>
+      </div>
+      <div>
+        <p>Original Image</p>
+        <img src="<%= originalImageUrl %>" alt="image">
+      </div>
+      <div class="mb-1">
+        <label class="form-label mb-0" for="image">Upload New Image</label>
+        <input
+          type="file"
+          class="form-control"
+          name="image"
+        />
+      </div>
+      <div class="row">
+        <div class="mb-1 col-md-4">
+          <label class="form-label mb-0" for="price">Price</label>
+          <input
+            class="form-control"
+            name="price"
+            value="<%= list.price %>"
+            required
+          />
+          <div class="invalid-feedback">Price should be valid.</div>
+        </div>
+        <div class="mb-1 col-md-8">
+          <label class="form-label mb-0" for="country">Country</label>
+          <input
+            type="text"
+            class="form-control"
+            name="country"
+            value="<%= list.country %>"
+            required
+          />
+          <div class="invalid-feedback">Country should be valid.</div>
+        </div>
+      </div>
+      <div class="mb-1">
+        <label class="form-label mb-0" for="location">Location</label>
+        <input
+          type="text"
+          class="form-control"
+          name="location"
+          value="<%= list.location %>"
+          required
+        />
+        <div class="invalid-feedback">Location should be valid.</div>
+      </div>
+      <br />
+      <button class="btn btn-dark">Edit</button>
+    </div>
+  </div>
+</form>
